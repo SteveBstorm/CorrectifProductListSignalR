@@ -1,0 +1,28 @@
+﻿@page "/list"
+@using CorrectifProductListSignalR.Models
+<h3>ProductList</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id Produit</th>
+            <th>Nom produit</th>
+            <th>Prix produit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Product p in MyList)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@code {
+
+}

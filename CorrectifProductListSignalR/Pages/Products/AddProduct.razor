@@ -1,0 +1,20 @@
+﻿@page "/addproduct"
+<h3>AddProduct</h3>
+
+<EditForm Model="MyForm" OnValidSubmit="SubmitForm">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label class="form-label">Nom du produit</label>
+        <InputText class="form-input" @bind-Value="MyForm.Name" />
+    </div>
+    <div class="form-group">
+        <label class="form-label">Prix du produit</label>
+        <InputNumber class="form-control" @bind-Value="MyForm.Price" />
+    </div>
+    <ValidationSummary />
+    <button class="btn btn-success">Valider</button>
+</EditForm>
+
+@code {
+
+}
